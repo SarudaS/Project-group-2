@@ -4,10 +4,10 @@
 # =====================================================
 from data import family_members
 
-def remove_member(target_name):
-    target_name = input("ลบชื่อ: ").lower()
+def remove_member():
+    target_name = input("ลบชื่อ: ")
     for remove_name in family_members :
-        if remove_name["name"].lower() == target_name:
+        if remove_name["name"].lower() == target_name.lower():
             family_members.remove(remove_name)
             return True
     return False
