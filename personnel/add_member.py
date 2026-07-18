@@ -4,7 +4,7 @@
 # =====================================================
 from data import family_members
 
-def add_member(name, age, power, money):
+def add_member(name, age, power, money,role,equipment):
  
     name = input("ชื่อ: ")
     age = int(input("อายุ: "))
