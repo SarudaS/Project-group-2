@@ -5,9 +5,11 @@
 from data import family_members
 
 def show_members():
+    for N in family_members :
+        N ["name"]
+        print(N)
 #   - print ข้อมูลลูกน้องทุกคนใน family_members บรรทัดละคน (ชื่อ, ตำแหน่ง, ความโหด, อาวุธ)
     # TODO: เขียนโค้ดตรงนี้
-    pass
 
 
 # ทดสอบเฉพาะไฟล์ตัวเอง: พิมพ์  python -m personnel.show_members
