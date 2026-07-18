@@ -30,6 +30,8 @@ def main():
         # ---------- เมนู 1 (ตัวอย่าง เขียนให้ดูแล้ว) ----------
         if choice == '1':
             print("\n--- เพิ่มลูกน้องใหม่ ---")
+            new_member = add_member()
+            print(new_member)
             # name = input("ชื่อ: ")
             # age = int(input("อายุ: "))
             # power = int(input("ความโหด (1-10): "))
@@ -41,7 +43,6 @@ def main():
             #     print("!! add_member ยังไม่ถูกเขียน (ไปเขียนใน personnel/add_member.py)")
             # else:
             #     print(f"เพิ่ม {new_member['name']} ในตำแหน่ง {new_member['role']} เรียบร้อยแล้ว")
-            add_member()
             
         # ---------- เมนู 2 (ตัวอย่าง เขียนให้ดูแล้ว) ----------
         elif choice == '2':
@@ -51,25 +52,33 @@ def main():
         # ---------- เมนู 3 (TODO) ----------
         elif choice == '3':
             print("\n--- ค้นหาประวัติ ---")
+            target_name = input("ชื่อ: ")
+            result = search_member(target_name)
+            
+                # search_member(name)
+            if result is not None:
+                print(f"{result['name']}, {result['age']}, {result['money']}, {result['equipment']}")
+            else:
+                print("ไม่พบชื่อในระบบ")
 
-            name = input("ชื่อ: ")
-            search_member(name)
-            if search_member is not None:
-                print(f"{name}, {power}, {money}, {weapons_catalog}")
-            else:print("ไม่พบชื่อในระบบ")
 
 
         # ---------- เมนู 4 (TODO) ----------
         elif choice == '4':
             print("\n--- สั่งเก็บลูกน้อง ---")
 
-            name = input()
-            remove_member(name)
-            if remove_member == True:
+            remove_name = remove_member()
+            # print(remove_name)
+
+            # name = input()
+            # remove_member(name)
+            if remove_name == True:
                 print("สั่งเก็บเรียบร้อย")
-            elif remove_member == False:
+                
+            elif remove_name == False:
                 print("ไม่พบชื่อในระบบ")
-            else:print("!! เมนูนี้ยังไม่ถูกเชื่อม")
+            else:
+                print("!! เมนูนี้ยังไม่ถูกเชื่อม")
             # 1) รับชื่อคนที่ต้องการลบด้วย input()
             # 2) เรียก remove_member(ชื่อ) แล้วเก็บผลไว้ (ได้ True หรือ False)
             # 3) True  -> print สั่งเก็บเรียบร้อย

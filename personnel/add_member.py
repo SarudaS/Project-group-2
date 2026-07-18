@@ -4,7 +4,7 @@
 # =====================================================
 from data import family_members
 
-def add_member(name, age, power, money,role,equipment):
+def add_member():
  
     name = input("ชื่อ: ")
     age = int(input("อายุ: "))
@@ -35,7 +35,7 @@ def add_member(name, age, power, money,role,equipment):
 
     family_members.append(new_member)
     
-    return(add_member)   # ต้องเห็น Vito ต่อท้ายลิสต์ และ role เป็น Hitman
+    return new_member   # ต้องเห็น Vito ต่อท้ายลิสต์ และ role เป็น Hitman
 
 
 
