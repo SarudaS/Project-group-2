@@ -62,12 +62,6 @@ def main():
             else:
                 print("ไม่พบชื่อในระบบ")
 
-            name = input("ชื่อ: ")
-            member = search_member(name)
-            if member is not None:
-                print(f"{member['name']}, {member['power']}, {member['money']}, {member['equipment']}")
-            else:
-                print("ไม่พบชื่อในระบบ")
 
 
         # ---------- เมนู 4 (TODO) ----------
