@@ -67,13 +67,18 @@ def main():
         elif choice == '4':
             print("\n--- สั่งเก็บลูกน้อง ---")
 
-            name = input()
-            remove_member(name)
-            if remove_member == True:
+            remove_name = remove_member()
+            # print(remove_name)
+
+            # name = input()
+            # remove_member(name)
+            if remove_name == True:
                 print("สั่งเก็บเรียบร้อย")
-            elif remove_member == False:
+                
+            elif remove_name == False:
                 print("ไม่พบชื่อในระบบ")
-            else:print("!! เมนูนี้ยังไม่ถูกเชื่อม")
+            else:
+                print("!! เมนูนี้ยังไม่ถูกเชื่อม")
             # 1) รับชื่อคนที่ต้องการลบด้วย input()
             # 2) เรียก remove_member(ชื่อ) แล้วเก็บผลไว้ (ได้ True หรือ False)
             # 3) True  -> print สั่งเก็บเรียบร้อย
