@@ -4,12 +4,25 @@
 # =====================================================
 
 def send_mission(person):
+
+    if person["power"] >= 7 :
+        reward = 300000
+        person["money"] += reward
+        return {
+            "status" : True ,
+            "reward" : reward
+        }
+    
+    return {
+        "status" : False,
+        "reward" : 0
+        }
+
 #   - power ของ person >= 7 -> บวกเงินรางวัล 300000 เข้าเงินของ person
 #     แล้ว return {"status": True, "reward": 300000}
 #   - ไม่ถึงเกณฑ์ -> return {"status": False, "reward": 0}
 #   (การลบคนที่ตาย main.py จัดการเอง)
     # TODO: เขียนโค้ดตรงนี้
-    pass
 
 
 # ทดสอบเฉพาะไฟล์ตัวเอง: พิมพ์  python -m missions.send_mission

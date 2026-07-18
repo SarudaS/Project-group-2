@@ -30,6 +30,10 @@ def add_member():
         new_member["role"] = "Sponsor"
         new_member["money"] = money
 
+    else:
+        new_member["money"] = money
+        new_member["power"] = power
+
     if equipment == "":
         new_member["equipment"] = "ไม่มี"
 
