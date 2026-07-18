@@ -30,6 +30,8 @@ def main():
         # ---------- เมนู 1 (ตัวอย่าง เขียนให้ดูแล้ว) ----------
         if choice == '1':
             print("\n--- เพิ่มลูกน้องใหม่ ---")
+            new_member = add_member()
+            print(new_member)
             # name = input("ชื่อ: ")
             # age = int(input("อายุ: "))
             # power = int(input("ความโหด (1-10): "))
@@ -41,8 +43,6 @@ def main():
             #     print("!! add_member ยังไม่ถูกเขียน (ไปเขียนใน personnel/add_member.py)")
             # else:
             #     print(f"เพิ่ม {new_member['name']} ในตำแหน่ง {new_member['role']} เรียบร้อยแล้ว")
-            new_member = add_member()
-            print(new_member)
             
         # ---------- เมนู 2 (ตัวอย่าง เขียนให้ดูแล้ว) ----------
         elif choice == '2':
@@ -52,12 +52,15 @@ def main():
         # ---------- เมนู 3 (TODO) ----------
         elif choice == '3':
             print("\n--- ค้นหาประวัติ ---")
+            target_name = input("ชื่อ: ")
+            result = search_member(target_name)
+            
+                # search_member(name)
+            if result is not None:
+                print(f"{result['name']}, {result['age']}, {result['money']}, {result['equipment']}")
+            else:
+                print("ไม่พบชื่อในระบบ")
 
-            name = input("ชื่อ: ")
-            search_member(name)
-            if search_member is not None:
-                print(f"{name}, {power}, {money}, {weapons_catalog}")
-            else:print("ไม่พบชื่อในระบบ")
 
 
         # ---------- เมนู 4 (TODO) ----------
