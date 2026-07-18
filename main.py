@@ -62,6 +62,12 @@ def main():
             else:
                 print("ไม่พบชื่อในระบบ")
 
+            name = input("ชื่อ: ")
+            member = search_member(name)
+            if member is not None:
+                print(f"{member['name']}, {member['power']}, {member['money']}, {member['equipment']}")
+            else:
+                print("ไม่พบชื่อในระบบ")
 
 
         # ---------- เมนู 4 (TODO) ----------
@@ -108,16 +114,6 @@ def main():
             if result["status"] == True:
                 print(member["power"])
 
-            # 1) เรียก show_catalog() แสดงรายการอาวุธ
-            # 2) รับรหัสอาวุธ แล้วหาอาวุธด้วย weapons_catalog.get(รหัส)
-            #    (.get(key) เหมือน dict[key] แต่ถ้าไม่มี key นี้จะได้ None แทนที่จะ error)
-            #    ถ้าได้ None -> print "ไม่มีสินค้านี้ในระบบ" (จบเมนูนี้เลย)
-            # 3) รับชื่อลูกน้อง แล้วหาคนด้วย search_member(ชื่อ)
-            #    ถ้าได้ None -> print "ไม่พบรายชื่อลูกน้องคนนี้" (จบเมนูนี้เลย)
-            # 4) เรียก equip_item(คน, อาวุธ) แล้วเก็บผลไว้ (ได้ dict)
-            #    print ผล["message"]
-            #    และถ้าผล["status"] เป็น True -> print ค่าพลังใหม่ของคนนั้น
-            # print("!! เมนูนี้ยังไม่ถูกเชื่อม")
 
         # ---------- เมนู 6 (TODO ของหัวหน้า — OPTIONAL) ----------
         elif choice == '6':
