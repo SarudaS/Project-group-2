@@ -41,7 +41,8 @@ def main():
             #     print("!! add_member ยังไม่ถูกเขียน (ไปเขียนใน personnel/add_member.py)")
             # else:
             #     print(f"เพิ่ม {new_member['name']} ในตำแหน่ง {new_member['role']} เรียบร้อยแล้ว")
-            add_member()
+            new_member = add_member()
+            print(new_member)
             
         # ---------- เมนู 2 (ตัวอย่าง เขียนให้ดูแล้ว) ----------
         elif choice == '2':
